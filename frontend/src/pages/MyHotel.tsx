@@ -11,6 +11,10 @@ const MyHotels = () => {
 		{ onError: () => {} }
 	);
 
+	// if (hotelData) {
+	// 	console.log(hotelData);
+	// }
+
 	if (!hotelData) {
 		return <span>No Hotels found</span>;
 	}
@@ -54,8 +58,8 @@ const MyHotels = () => {
 						</div>
 						<span className="flex justify-end">
 							<Link
-								to={`/edit-hotel${hotel._id}`}
 								className="flex bg-blue-600 text-white text-xl font-bold p-2 hover:bg-blue-500"
+								to={`/edit-hotel/${hotel._id}`}
 							>
 								View Details
 							</Link>
